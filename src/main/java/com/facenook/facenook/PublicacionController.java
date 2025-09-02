@@ -32,6 +32,7 @@ public class PublicacionController {
     }
 
     // GET /publicaciones/{id}/calificaciones
+    @GetMapping("/{id}/calificaciones")
     public List<Calificacion> obtenerCalificaciones(@PathVariable int id) {
         return publicacionService.obtenerCalificaciones(id);
     }

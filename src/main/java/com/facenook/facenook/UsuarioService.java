@@ -6,21 +6,21 @@ import java.util.List;
 @Service
 public class UsuarioService {
 
-    // Fuente de datos en memoria (pauta: mínimo 3 registros)
     private final List<Usuario> usuarios = new ArrayList<>();
 
     public UsuarioService() {
+        //CREACIÓN DE USUARIOS
         usuarios.add(new Usuario(1, "Cynthia", "cynthia@example.com"));
         usuarios.add(new Usuario(2, "Cristopher", "cristopher@example.com"));
         usuarios.add(new Usuario(3, "Admin", "admin@example.com"));
     }
 
-    /** Devuelve todos los usuarios. */
+    //OBTENGO TODOS LOS USUARIOS
     public List<Usuario> obtenerTodos() {
         return usuarios;
     }
 
-    /** Devuelve un usuario por id o null si no existe. */
+    //OBTENGO LOS USUARIOS POR ID
     public Usuario obtenerPorId(int id) {
         for (Usuario u : usuarios) {
             if (u.getId() == id) return u;
@@ -28,7 +28,7 @@ public class UsuarioService {
         return null;
     }
 
-    // GET /usuarios/buscar?q=texto
+    //OBTENGO LOS USUARIOS POR NOMBRE
     public List<Usuario> buscar(String q) {
         String term = q == null ? "" : q.trim().toLowerCase();
         List<Usuario> resultado = new ArrayList<>();

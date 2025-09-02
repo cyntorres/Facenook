@@ -20,7 +20,7 @@ public class PublicacionService {
         //PRIMERA PUBLICACIÓN
         Publicacion p1 = new Publicacion(1,cynthia,"Conejito","¿Cómo están? ¿Que calificacion le dan a este conejito?",LocalDate.now().minusDays(2));
         Publicacion p2 = new Publicacion(2,cristopher,"¡Extremo!","¡Admiren el movimiento de hoy! ¿Calificación?",LocalDate.now().minusDays(2));
-        Publicacion p3 = new Publicacion(2,admin,"¡Ser admin!","¿Que calificación me dan como admin?",LocalDate.now().minusDays(2));
+        Publicacion p3 = new Publicacion(3,admin,"¡Ser admin!","¿Que calificación me dan como admin?",LocalDate.now().minusDays(2));
 
         p1.getImagenes().add("/img/conejo_1.jpg");
         p1.getComentarios().add(new Comentario(101, cristopher, "Un 5", LocalDate.now().minusDays(2)));
@@ -34,11 +34,11 @@ public class PublicacionService {
         p2.getCalificaciones().add(new Calificacion(203, cynthia, 5, LocalDate.now().minusDays(2)));
         p2.getCalificaciones().add(new Calificacion(204, admin, 2, LocalDate.now().minusDays(2)));
 
-        p2.getImagenes().add("/img/conejo_1.jpg");
-        p2.getComentarios().add(new Comentario(105, cynthia, "¡Un 5!", LocalDate.now().minusDays(2)));
-        p2.getComentarios().add(new Comentario(106, cristopher, "¡Es mi venganza sparky! 2", LocalDate.now()));
-        p2.getCalificaciones().add(new Calificacion(205, cynthia, 5, LocalDate.now().minusDays(2)));
-        p2.getCalificaciones().add(new Calificacion(206, cristopher, 2, LocalDate.now().minusDays(2)));
+        p3.getImagenes().add("/img/conejo_1.jpg");
+        p3.getComentarios().add(new Comentario(105, cynthia, "¡Un 5!", LocalDate.now().minusDays(2)));
+        p3.getComentarios().add(new Comentario(106, cristopher, "¡Es mi venganza sparky! 2", LocalDate.now()));
+        p3.getCalificaciones().add(new Calificacion(205, cynthia, 5, LocalDate.now().minusDays(2)));
+        p3.getCalificaciones().add(new Calificacion(206, cristopher, 2, LocalDate.now().minusDays(2)));
 
         publicaciones.add(p1);
         publicaciones.add(p2);
